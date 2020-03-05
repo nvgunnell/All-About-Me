@@ -1,11 +1,6 @@
 {% extends "allaboutme/base.html" %}
-{% load tethys_gizmos %}
-{% load static %}
-{% block header_buttons %}
-  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
-    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
-  </div>
-{% endblock %}
+
+
 
 {% block app_content %}
 <h1 id="title">
@@ -16,7 +11,7 @@
     <h2>Nathan Gunnell  |  3/5/2020  |  Assignment 10  |  CE EN 514</h2>
 </div>
 
-<div id="mapid"></div>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
@@ -28,9 +23,11 @@
 <style>
   #mapid {
     height: 300 px;
-    width: 60%;
+    width: 500 px;
   }
 </style>
+
+<div id="mapid"></div>
 
 <script>
   var mymap = L.map('mapid').setView([40.295, -111.7], 13);
@@ -90,11 +87,5 @@ var hbound = L.polygon([
     [40.289153, -111.719968]
 ]).addTo(mymap);
 </script>
-
-{% endblock %}
-
-
-
-{% block app_actions %}
 
 {% endblock %}
