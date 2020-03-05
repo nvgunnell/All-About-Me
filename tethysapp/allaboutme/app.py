@@ -31,8 +31,8 @@ class Allaboutme(TethysAppBase):
             ),
             UrlMap = (
                 name='map',
-                url='allaboutme'
-                controller='allaboutme.contollers.map'
+                url='allaboutme',
+                controller='allaboutme.contollers.map',
         )
         )
 
