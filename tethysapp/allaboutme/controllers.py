@@ -3,6 +3,14 @@ from tethys_sdk.permissions import login_required
 from tethys_sdk.gizmos import Button
 
 @login_required()
+    def map(request):
+        """
+        Controller for the page
+        """
+        context = {}
+        return render (request, 'allaboutme/map.html', context)
+
+@login_required()
 def home(request):
     """
     Controller for the app home page.
@@ -16,6 +24,7 @@ def home(request):
             'data-toggle':'tooltip',
             'data-placement':'top',
             'title':'Save'
+
         }
     )
 
