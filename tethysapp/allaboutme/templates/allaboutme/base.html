@@ -14,8 +14,8 @@
 
 {% block app_navigation_items %}
 
-  {% url 'quaker_motus:home' as home_url %}
-  {% url 'quaker_motus:map' as map_url %}
+  {% url 'allaboutme:home' as home_url %}
+  {% url 'allaboutme:map' as map_url %}
 
   <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Home Page</a></li>
   <li class="{% if request.path == map_url %}active{% endif %}"><a href="{{ map_url }}">Map</a></li>
