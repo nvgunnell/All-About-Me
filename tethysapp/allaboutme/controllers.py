@@ -3,7 +3,7 @@ from tethys_sdk.permissions import login_required
 from tethys_sdk.gizmos import Button
 
 @login_required()
-    def map(request):
+def map(request):
         """
         Controller for the page
         """
